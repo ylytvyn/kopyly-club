@@ -1,0 +1,17 @@
+.intro {
+    background: #fff url('../images/intro-bg.jpg') center bottom no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+
+    &__img {
+
+        img {
+            width: 100%;
+            margin: 43% 0 0 -10%;
+        }
+    }
+
+    &__video {
+        width: 100%;
+    }
+}
