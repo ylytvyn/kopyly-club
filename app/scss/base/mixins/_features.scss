@@ -47,3 +47,7 @@
     $opacity-ie: $opacity * 100;
     filter: alpha(opacity=$opacity-ie); //IE8
 }
+
+@mixin mixed-bg($startColor, $endColor, $colorPos) {
+    background: -webkit-linear-gradient(left, $startColor 0%, $startColor $colorPos, $endColor $colorPos, $endColor 100%);
+}

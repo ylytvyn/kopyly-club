@@ -20,7 +20,22 @@
 </head>
 <body>
 	<header class="header">
-		Header
+		<div class="container">
+			<div class="row">
+				<div class="col-12 d-flex justify-content-between">
+					<a href="#" class="header__logo">
+						<img src="" alt="Angro logo">
+					</a>
+
+					<ul class="header__contact d-flex">
+						<!-- LINKS!!!!!!!!!!! -->
+						<li class="header__text">Полтава, вул. Анатолія Кукоби, 12</li>
+						<li class="header__text">+38(050) 991-58-80</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
 	</header>
 
 	<section class="intro">
@@ -88,11 +103,56 @@
 	</section>
 
 	<section class="contact">
+		<div class="container">
+			<div class="row">
+				photo block
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<div class="contact__block">
+						<h2 class="contact__title">Передзвонимо и проконсультуємо по будь-якому питанню, оформіть заявку</h2>
+						<p class="contact__text">Ми зв'яжемося з Вами в робочий час Пн-Пт 9:00-18:00</p>
 
+						<form action="#" class="contact__form">
+							<input type="text" name="name" class="contact__field" placeholder="Ваше ім’я" required>
+							<input type="tel" name="phone" class="contact__field" placeholder="Телефон" required>
+							<input type="email" name="email" class="contact__field" placeholder="Email (не обов’язково)">
+
+							<div class="contact__wrap">
+								<button type="submit">Відправити</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<footer class="footer">
+		<div class="container">
+			<a href="#" class="footer__logo">
+				<img src="" alt="Angro logo">
+			</a>
+			<!-- LINKS!!!!!!!!!!! -->
+			<div class="footer__row">
+				<span class="footer__address">Полтава, вул. Анатолія Кукоби, 12</span>
+			</div>
+			<div class="footer__row">
+				<span class="footer__tel">+38 (050) 991-58-80</span>
+			</div>
+			<div class="footer__copyright">
+				<p>&copy; 2020. www.angro.com.ua</p>
 
+				<ul class="social">
+					<li class="social__item">
+						<a href="#" class="social__link"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 
 	<!--build:js js/main.min.js -->
