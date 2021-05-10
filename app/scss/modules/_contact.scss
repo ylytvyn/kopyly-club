@@ -1,0 +1,114 @@
+.contact {
+    padding: 70px 0 0;
+    @include mixed-bg(#fff, var(--green), 75%);
+
+    &__plan {
+        display: block;
+        text-decoration: none;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__quantity {
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__block {
+        margin-top: 90px;
+        background: url('../images/form.jpg') no-repeat bottom center;
+        background-size: cover;
+    }
+
+    &__wrap {
+        width: 55%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+        padding: 80px;
+        
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-size: 16px;
+        color: var(--pink);
+    }
+
+    &__field {
+        background: none;
+        color: rgba(255, 255, 255, .8);
+        font: 18px $font;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+        width: 100%;
+        padding: 7px 15px;
+        margin-bottom: 30px;
+        transition: all .3s;
+
+        &:focus {
+            border-bottom-color: var(--green);
+        }
+
+        &::placeholder {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        // &:invalid {
+        //     color: #FF8D8D;
+        //     border-bottom-color: #FF8D8D;
+        // }
+    }
+
+    &__btn-wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+
+        .icon {
+            @include size(70px, 13px);
+            margin-right: 15%;
+            fill: var(--grey);
+        }
+    }
+}
+
+.buildings {
+    margin-top: 100px;
+
+    &__item {
+        font-size: 18px;
+        font-weight: 700;
+        padding-left: 80px;
+        position: relative;
+        line-height: 48px;
+        margin-bottom: 40px;
+
+        &::before {
+            @include size(45px);
+            @include pos($l: 0, $t: 0);
+            content: '';
+        }
+
+        &--green::before {
+            background: #B0D18C;
+        }
+
+        &--yellow::before {
+            background: #F5EAAA;
+        }
+
+        &--pink::before {
+            background: #F0AF9A;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.plans {
+    background: url('../images/plans-bg.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    .swiper-slide {
+        align-items: start;
+        justify-content: space-between;
+        padding: 18vh 100px 12vh 130px;
+    }
+
+    &__title {
+        @include pos($t: 7vh, $z: 9);
+        font-size: 28px;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    &__wrap {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(4px);
+        padding: 35px;
+        color: #fff;
+        width: 35%;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__imgs {
+        display: flex;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 60%;
+
+        a {
+            display: contents;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+}

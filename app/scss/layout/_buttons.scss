@@ -1,0 +1,43 @@
+.btn {
+    display: inline-block;
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    padding: 15px 45px;
+    background: none;
+    text-decoration: none;
+    color: #fff;
+    font: 18px $font;
+    cursor: pointer;
+    white-space: nowrap;
+
+    span {
+        z-index: 20;
+    }
+      
+    &:after {
+        @include pos($l: -75px, $t: -50px, $z: 0);
+        @include size(50px, 155px);
+        background: #fff;
+        content: "";
+        opacity: .2;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &:hover {
+        &:after {
+            left: 120%;
+            transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    }
+
+    &--black {
+        color: var(--brown);
+
+        &::after {
+            z-index: 0;
+            background: var(--green);
+        }
+    }
+}

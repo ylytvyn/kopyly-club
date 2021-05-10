@@ -1,0 +1,18 @@
+.social {
+    float: right;
+    margin: -5px 0 0 -85px;
+    display: flex;
+
+    &__item {
+        margin-left: 35px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    .icon {
+        @include size(25px);
+        transition: all .3s;
+    }
+}

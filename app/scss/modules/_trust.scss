@@ -1,4 +1,43 @@
 .trust {
     padding: 50px 0;
     @include mixed-bg(#fff, var(--grey), 45%);
+
+    &__link {
+        font-size: 15px;
+        text-decoration: none;
+        color: var(--brown);
+        transition: all .3s;
+
+        &:hover {
+            color: var(--green);
+        }
+    }
+
+    &__wrap {
+        width: 46%;
+        text-align: center;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 70px;
+        font-weight: 700;
+        margin-bottom: 20px;
+
+        .icon {
+            @include size(40px, 65px);
+            margin: 0 5px;
+
+            &--reverse {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    &__text {
+        font-size: 17px;
+    }
+
 }

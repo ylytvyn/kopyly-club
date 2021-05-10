@@ -1,0 +1,51 @@
+.project {
+    padding: 70px 0 120px;
+    position: relative;
+    @include mixed-bg(var(--green), #fff, 25%);
+    
+    &::before {
+        @include size(75%, 100%);
+        @include pos($l: 25%, $t: 0);
+        background: url('../images/video-bg.jpg') no-repeat bottom center;
+        background-size: cover;
+        content: '';
+    }
+
+    &__title {
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+
+        span {
+            color: var(--green);
+        }
+    }
+
+    &__video {
+        @include size(100%, 340px);
+        margin: 30px 0 0 -10%;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .icon {
+            @include size(55px);
+            margin-right: 30px;
+        }
+
+        div {
+            font-size: 17px;
+            line-height: 22px;
+        }
+
+        p {
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+}

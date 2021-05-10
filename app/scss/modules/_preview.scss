@@ -1,0 +1,12 @@
+.preview {
+    position: relative;
+
+    &__intro {
+        @include pos($r: 0, $t: 80px, $z: 9);
+        padding: 20px 90px 20px 150px;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.1) 38.58%, rgba(255, 255, 255, 0) 100%);
+        backdrop-filter: blur(3px);
+        color: #fff;
+        font-size: 20px;
+    }
+}

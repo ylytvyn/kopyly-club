@@ -1,0 +1,48 @@
+.footer {
+    text-align: center;
+    padding: 30px 0 5px;
+
+    &__logo {
+        text-decoration: none;
+        margin-bottom: 30px;
+        display: inline-block;
+
+        .icon {
+            @include size(75px);
+            fill: var(--brown);
+        }
+    }
+
+    &__row {
+        margin-bottom: 10px;
+
+        a {
+            text-decoration: none;
+            transition: all .3s;
+            font-size: 16px;
+            color: var(--brown);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                color: var(--green);
+            }
+        }
+        
+        .icon {
+            @include size(20px);
+            margin-right: 15px;
+        }
+    }
+
+    &__copyright {
+        margin-top: 30px;
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
+

@@ -1,0 +1,65 @@
+.swiper {
+    &-container {
+        @include size(100%, 100vh);
+    }
+
+    &-slide {
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &-pagination {
+        bottom: 20vh !important;
+
+        .plans & {
+            bottom: 40px !important;
+        }
+
+        &-bullet {
+            background: var(--grey);
+            opacity: 1;
+            transition: all .3s;
+            margin: 0 10px !important;
+
+            &:hover {
+                background: #F0AF9A;
+            }
+
+            &-active {
+                background: var(--pink);
+                box-shadow: 0 0 10px 0 #F0AF9A;
+            }
+        }
+    }
+
+    &-button-next, 
+    &-button-prev {
+        @include size(60px);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 50%;
+        transition: all .3s;
+
+        &:hover {
+            background: rgba(240, 175, 154, 0.5);
+        }
+
+        &::after {
+            display: none;
+        }
+
+        .icon {
+            @include size(20px);
+            margin-left: 2px;
+        }
+    }
+
+    &-button-prev .icon {
+        transform: rotate(180deg);
+        margin-left: -3px;
+    }
+}
