@@ -3,10 +3,19 @@
 
     &__intro {
         @include pos($r: 0, $t: 80px, $z: 9);
+        @include font(20px);
         padding: 20px 90px 20px 150px;
         background: linear-gradient(270deg, rgba(255, 255, 255, 0.1) 38.58%, rgba(255, 255, 255, 0) 100%);
         backdrop-filter: blur(3px);
         color: #fff;
-        font-size: 20px;
+
+        @media (max-width: $tablet) {
+            top: 40px;
+        }
+
+        @media (max-width: $mobile) {
+            padding: 20px 10% 20px 20%;
+            top: 30px;
+        }
     }
 }

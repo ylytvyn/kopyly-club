@@ -4,20 +4,43 @@
     height: 100vh;
     position: relative;
 
+    @media (max-width: $tablet) {
+        height: auto;
+    }
+
+    @media (max-width: $mobile) {
+        .swiper-button-next, 
+        .swiper-button-prev {
+            top: 32%;
+        }
+    }
+
     .swiper-slide {
         align-items: start;
         justify-content: space-between;
         padding: 18vh 100px 12vh 130px;
+
+        @media (max-width: $tablet) {
+            padding: 13vh 11% 9vh;
+        }
+
+        @media (max-width: $mobile) {
+            padding: 13vh 18% 9vh;
+            display: block;
+        }
     }
 
     &__title {
+        @include font(28px, 700);
         @include pos($t: 7vh, $z: 9);
-        font-size: 28px;
         color: #fff;
-        font-weight: 700;
         text-align: center;
         text-transform: uppercase;
         width: 100%;
+
+        @media (max-width: $tablet) {
+            top: 5vh;
+        }
     }
 
     &__wrap {
@@ -27,23 +50,35 @@
         color: #fff;
         width: 35%;
 
+        @media (max-width: $tablet) {
+            padding: 25px;
+            width: 40%;
+        }
+
+        @media (max-width: $mobile) {
+            padding: 25px;
+            width: 100%;
+        }
+
         h2 {
+            @include font(22px, 700);
             text-transform: uppercase;
-            font-weight: 700;
-            font-size: 22px;
             margin-bottom: 40px;
         }
 
         h3 {
+            @include font(18px, 700);
             text-transform: uppercase;
-            font-weight: 700;
-            font-size: 18px;
             margin-bottom: 15px;
         }
 
         p {
-            font-size: 15px;
+            @include font(15px);
             margin-bottom: 5px;
+
+            @media (max-width: $tablet) {
+                margin-bottom: 2px;
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -57,12 +92,48 @@
         height: 100%;
         width: 60%;
 
+        @media (max-width: $tablet) {
+            width: 57%;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+            display: block;
+        }
+
         a {
             display: contents;
+
+            @media (max-width: $tablet) {
+                display: block;
+                transform: rotate(90deg);
+
+                &:last-child {
+                    margin-top: -20%;
+                }
+            }
+
+            @media (max-width: $mobile) {
+                margin-top: -10%;
+
+                &:last-child {
+                    margin: -60% 0 -70%;
+                }
+            }
         }
 
         img {
             height: 100%;
+
+            @media (max-width: $tablet) {
+                height: auto;
+                width: 53%;
+            }
+
+            @media (max-width: $mobile) {
+                width: 75%;
+            }
         }
     }
 }

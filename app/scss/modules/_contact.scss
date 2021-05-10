@@ -2,6 +2,11 @@
     padding: 70px 0 0;
     @include mixed-bg(#fff, var(--green), 75%);
 
+    @media (max-width: $mobile) {
+        padding-top: 40px;
+        overflow-x: hidden;
+    }
+
     &__plan {
         display: block;
         text-decoration: none;
@@ -12,15 +17,22 @@
     }
 
     &__quantity {
-        font-size: 22px;
+        @include font(22px, 700);
         text-transform: uppercase;
-        font-weight: 700;
     }
 
     &__block {
         margin-top: 90px;
-        background: url('../images/form.jpg') no-repeat bottom center;
+        background: url('../images/form-m.jpg') no-repeat bottom center;
         background-size: cover;
+
+        @media (min-width: $tablet) {
+            background-image: url('../images/form.jpg');
+        }
+
+        @media (max-width: $tablet) {
+            margin: 25px -40px 0;
+        }
     }
 
     &__wrap {
@@ -29,25 +41,38 @@
         backdrop-filter: blur(3px);
         padding: 80px;
         
+        @media (max-width: $tablet) {
+            width: 100%;
+            backdrop-filter: blur(6px);
+            padding: 40px 20%;
+        }
+
+        @media (max-width: $mobile) {
+            padding: 40px 12%;
+        }
     }
 
     &__title {
+        @include font(18px, false, 24px);
         text-transform: uppercase;
         color: #fff;
-        font-size: 18px;
-        line-height: 24px;
         margin-bottom: 40px;
+
+        @media (max-width: $tablet) {
+            @include font(20px, 700, 27px);
+        }
     }
 
     &__text {
-        font-size: 16px;
+        @include font(16px);
         color: var(--pink);
     }
 
     &__field {
+        @include font(18px);
+        font-family: $font;
         background: none;
         color: rgba(255, 255, 255, .8);
-        font: 18px $font;
         border-bottom: 1px solid rgba(255, 255, 255, .5);
         width: 100%;
         padding: 7px 15px;
@@ -85,13 +110,19 @@
 .buildings {
     margin-top: 100px;
 
+    @media (max-width: $tablet) {
+        margin-top: 0;
+    }
+
     &__item {
-        font-size: 18px;
-        font-weight: 700;
+        @include font(18px, 700, 48px);
         padding-left: 80px;
         position: relative;
-        line-height: 48px;
         margin-bottom: 40px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 20px;
+        }
 
         &::before {
             @include size(45px);

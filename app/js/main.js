@@ -1,12 +1,5 @@
 'use strict';
 
-// (function($){
-// 	$(document).ready(function() {
-// 		// Code
-		
-// 	});
-// })(jQuery);
-
 const swiper = new Swiper('.swiper-container', {
 	direction: 'horizontal',
 	slidesPerView: 1,

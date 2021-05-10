@@ -1,6 +1,19 @@
 .swiper {
     &-container {
         @include size(100%, 100vh);
+        min-height: 500px;
+
+        @media (max-width: $tablet) {
+            height: 75vh;
+        }
+
+        @media (max-width: $mobile) {
+            height: 85vh;
+
+            .plans & {
+                height: auto;
+            }
+        }
     }
 
     &-slide {
@@ -15,6 +28,10 @@
     &-pagination {
         bottom: 20vh !important;
 
+        @media (max-width: $tablet) {
+            bottom: 18vh !important;
+        }
+
         .plans & {
             bottom: 40px !important;
         }
@@ -25,8 +42,14 @@
             transition: all .3s;
             margin: 0 10px !important;
 
-            &:hover {
-                background: #F0AF9A;
+            @media (min-width: $tablet) {
+                &:hover {
+                    background: #F0AF9A;
+                }
+            }
+
+            @media (max-width: $tablet) {
+                @include size(15px);
             }
 
             &-active {
@@ -44,8 +67,10 @@
         border-radius: 50%;
         transition: all .3s;
 
-        &:hover {
-            background: rgba(240, 175, 154, 0.5);
+        @media (min-width: $tablet) {
+            &:hover {
+                background: rgba(240, 175, 154, 0.5);
+            }
         }
 
         &::after {

@@ -4,7 +4,6 @@ const SOURCES = {
 		'./node_modules/swiper/swiper-bundle.min.css'
 	],
 	js: [
-		'./node_modules/jquery/dist/jquery.min.js',
 		'./node_modules/swiper/swiper-bundle.min.js'
 	]
 };

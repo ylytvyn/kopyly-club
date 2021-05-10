@@ -1,13 +1,10 @@
 p {
-    font-size: 17px;
-    line-height: 21px;
+    @include font(17px, false, 21px);
     margin-bottom: 40px;
 }
 
 .title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 38px;
+    @include font(30px, 700, 38px);
     text-transform: uppercase;
     margin-bottom: 30px;
 }

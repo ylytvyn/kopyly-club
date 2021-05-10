@@ -17,17 +17,18 @@
         margin-bottom: 10px;
 
         a {
+            @include font(16px, 700);
             text-decoration: none;
             transition: all .3s;
-            font-size: 16px;
             color: var(--brown);
-            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            &:hover {
-                color: var(--green);
+            @media (min-width: $tablet) {
+                &:hover {
+                    color: var(--green);
+                }
             }
         }
         
@@ -41,7 +42,7 @@
         margin-top: 30px;
 
         p {
-            font-size: 15px;
+            @include font(15px);
         }
     }
 }

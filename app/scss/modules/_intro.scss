@@ -1,17 +1,32 @@
 .intro {
-    background: #fff url('../images/intro-bg.jpg') center bottom no-repeat;
+    background: #fff url('../images/intro-bg-m.jpg') center bottom no-repeat;
     background-size: cover;
     padding: 60px 0;
 
+    @media (min-width: $tablet) {
+        background-image: url('../images/intro-bg.jpg');
+    }
+
     &__img {
+        @media (max-width: $mobile) {
+            margin-bottom: 30px;
+        }
 
         img {
             width: 100%;
             margin: 43% 0 0 -10%;
+
+            @media (max-width: $tablet) {
+                margin: 0;
+            }
         }
     }
 
     &__video {
         width: 100%;
+
+        @media (min-width: $tablet) {
+            margin-top: -5%;
+        }
     }
 }

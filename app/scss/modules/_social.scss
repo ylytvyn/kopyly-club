@@ -3,16 +3,48 @@
     margin: -5px 0 0 -85px;
     display: flex;
 
+    @media (max-width: $tablet) {
+        .header & {
+            float: none;
+            margin: 0;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        .footer & { 
+            margin: 0 0 20px;
+            justify-content: center;
+            float: none;
+        }
+    }
+
     &__item {
         margin-left: 35px;
 
         &:first-child {
             margin-left: 0;
         }
+        
+        @media (max-width: $tablet) {
+            .header & {
+                margin: 0 0 30px 7vh;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        
     }
 
     .icon {
         @include size(25px);
         transition: all .3s;
+
+        @media (max-width: $tablet) {
+            @include size(40px);
+        }
     }
 }

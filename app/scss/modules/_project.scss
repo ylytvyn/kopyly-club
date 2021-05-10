@@ -2,21 +2,33 @@
     padding: 70px 0 120px;
     position: relative;
     @include mixed-bg(var(--green), #fff, 25%);
-    
-    &::before {
-        @include size(75%, 100%);
-        @include pos($l: 25%, $t: 0);
-        background: url('../images/video-bg.jpg') no-repeat bottom center;
-        background-size: cover;
-        content: '';
+
+    @media (max-width: $tablet) {
+        padding-bottom: 50px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 40px 0;
+    }
+
+    @media (min-width: $tablet) {
+        &::before {
+            @include size(75%, 100%);
+            @include pos($l: 25%, $t: 0);
+            background: url('../images/video-bg.jpg') no-repeat bottom center;
+            background-size: cover;
+            content: '';
+        }
     }
 
     &__title {
-        font-size: 26px;
-        line-height: 36px;
-        font-weight: 700;
+        @include font(26px, 700, 36px);
         text-transform: uppercase;
         margin-bottom: 40px;
+
+        @media (max-width: $mobile) {
+            @include font(22px, 700, 30px);
+        }
 
         span {
             color: var(--green);
@@ -26,12 +38,40 @@
     &__video {
         @include size(100%, 340px);
         margin: 30px 0 0 -10%;
+
+        @media (max-width: $tablet) {
+            margin: 0;
+            height: 385px;
+        }
+
+        @media (max-width: $mobile) {
+            margin: 0 -15px;
+            width: calc(100% + 30px);
+            height: 260px;
+        }
+    }
+
+    &__list {
+        @media (max-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
     }
 
     &__item {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
+        
+        @media (max-width: $tablet) {
+            width: 47%;
+        }
+
+        @media (max-width: $mobile) {
+            width: 95%;
+        }
 
         .icon {
             @include size(55px);
@@ -39,8 +79,7 @@
         }
 
         div {
-            font-size: 17px;
-            line-height: 22px;
+            @include font(17px, false, 22px);
         }
 
         p {

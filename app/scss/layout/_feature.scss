@@ -5,24 +5,56 @@
     width: 100%;
     height: 18vh;
 
+    @media (max-width: $tablet) {
+        flex-wrap: wrap;
+        height: 16vh;
+    }
+
+    @media (max-width: $mobile) {
+        height: 18vh;
+    }
+
     &__item {
+        @include font(18px);
         width: 25%;
         color: #fff;
         padding: 25px 35px;
         border-right: 1px solid rgba(255, 255, 255, .8);
-        font-size: 18px;
         text-transform: uppercase;
+
+        @media (max-width: $tablet) {
+            width: 50%;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            
+            &:first-child,
+            &:nth-child(2) {
+                border-bottom: 1px solid rgba(255, 255, 255, .8);
+            }
+        }
+
+        @media (max-width: $mobile) {
+            @include font(14px);
+            padding: 15px 25px;
+        }
 
         &:last-child {
             border-right: none;
         }
 
         i {
+            @include font(30px);
             font-style: normal;
             display: block;
-            font-size: 30px;
             color: var(--pink);
             margin-bottom: 25px;
+
+            @media (max-width: $tablet) {
+                margin: 0 15px 0 0;
+                @include font(25px);
+                display: inline-block;
+            }
         }
     }
 }
