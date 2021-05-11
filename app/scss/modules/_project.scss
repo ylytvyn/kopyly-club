@@ -36,8 +36,7 @@
     }
 
     &__video {
-        @include size(100%, 340px);
-        margin: 30px 0 0 -10%;
+        @include size(100%, 625px);
 
         @media (max-width: $tablet) {
             margin: 0;

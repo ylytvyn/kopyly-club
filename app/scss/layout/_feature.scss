@@ -3,15 +3,30 @@
     backdrop-filter: blur(4px);
     display: flex;
     width: 100%;
-    height: 18vh;
+    height: auto;
+        min-height: 110px;
+    //height: 18vh;
+
+    @media (min-width: $desktop) {
+        max-height: 18vh;
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        //height: 130px;
+    }
 
     @media (max-width: $tablet) {
         flex-wrap: wrap;
-        height: 16vh;
+        //height: 16vh;
+    }
+
+    @media (min-width: 768px) and (max-width: $tablet) {
+        //height: 18vh;
     }
 
     @media (max-width: $mobile) {
-        height: 18vh;
+        //height: auto;
+        //min-height: 110px;
     }
 
     &__item {
@@ -21,6 +36,18 @@
         padding: 25px 35px;
         border-right: 1px solid rgba(255, 255, 255, .8);
         text-transform: uppercase;
+
+        &:not(i) {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            hyphens: auto;
+        }
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            @include font(15px, false, 18px);
+            padding: 20px 30px;
+        }
 
         @media (max-width: $tablet) {
             width: 50%;
@@ -35,8 +62,8 @@
         }
 
         @media (max-width: $mobile) {
-            @include font(14px);
-            padding: 15px 25px;
+            @include font(12px, false, 15px);
+            padding: 15px;
         }
 
         &:last-child {
@@ -49,6 +76,7 @@
             display: block;
             color: var(--pink);
             margin-bottom: 25px;
+            word-break: normal;
 
             @media (max-width: $tablet) {
                 margin: 0 15px 0 0;

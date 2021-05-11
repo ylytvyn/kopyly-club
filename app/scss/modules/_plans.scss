@@ -1,7 +1,7 @@
 .plans {
     background: url('../images/plans-bg.jpg') no-repeat center;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 
     @media (max-width: $tablet) {
@@ -18,28 +18,28 @@
     .swiper-slide {
         align-items: start;
         justify-content: space-between;
-        padding: 18vh 100px 12vh 130px;
+        padding: 7vh 100px 12vh 130px;
 
         @media (max-width: $tablet) {
-            padding: 13vh 11% 9vh;
+            padding: 7vh 11% 9vh;
         }
 
         @media (max-width: $mobile) {
-            padding: 13vh 18% 9vh;
+            padding: 5vh 50px;
             display: block;
         }
     }
 
     &__title {
         @include font(28px, 700);
-        @include pos($t: 7vh, $z: 9);
         color: #fff;
         text-align: center;
         text-transform: uppercase;
         width: 100%;
+        padding: 50px 25px 0;
 
-        @media (max-width: $tablet) {
-            top: 5vh;
+        @media (max-width: $mobile) {
+            padding-top: 30px;
         }
     }
 
@@ -52,7 +52,7 @@
 
         @media (max-width: $tablet) {
             padding: 25px;
-            width: 40%;
+            width: 55%;
         }
 
         @media (max-width: $mobile) {
@@ -89,51 +89,51 @@
     &__imgs {
         display: flex;
         justify-content: space-evenly;
-        height: 100%;
         width: 60%;
 
         @media (max-width: $tablet) {
-            width: 57%;
+            width: 45%;
             flex-wrap: wrap;
         }
 
         @media (max-width: $mobile) {
             width: 100%;
             display: block;
+            margin-top: 20px;
         }
 
         a {
             display: contents;
 
             @media (max-width: $tablet) {
+                margin: 0 0 15px 10%;
                 display: block;
-                transform: rotate(90deg);
-
-                &:last-child {
-                    margin-top: -20%;
-                }
             }
 
             @media (max-width: $mobile) {
-                margin-top: -10%;
-
-                &:last-child {
-                    margin: -60% 0 -70%;
-                }
+                margin: 0 0 15px 0;
             }
         }
 
         img {
-            height: 100%;
+            max-height: 500px;
+            display: block;
+            max-width: 45%;
 
             @media (max-width: $tablet) {
-                height: auto;
-                width: 53%;
+                max-width: 100%;
+                margin: 0 auto;
             }
+        }
+    }
 
-            @media (max-width: $mobile) {
-                width: 75%;
-            }
+    @media (max-width: $mobile) {
+        .swiper-button-next {
+            right: 3px;
+        }
+    
+        .swiper-button-prev {
+            left: 3px;
         }
     }
 }

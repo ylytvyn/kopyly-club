@@ -3,16 +3,21 @@
         @include size(100%, 100vh);
         min-height: 500px;
 
+        .plans & {
+            height: auto;
+        }
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            min-height: 650px;
+        }
+
         @media (max-width: $tablet) {
-            height: 75vh;
+            height: 80vh;
         }
 
         @media (max-width: $mobile) {
             height: 85vh;
-
-            .plans & {
-                height: auto;
-            }
+            min-height: 600px;
         }
     }
 
@@ -27,6 +32,10 @@
 
     &-pagination {
         bottom: 20vh !important;
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            bottom: 150px !important;
+        }
 
         @media (max-width: $tablet) {
             bottom: 18vh !important;
@@ -48,10 +57,6 @@
                 }
             }
 
-            @media (max-width: $tablet) {
-                @include size(15px);
-            }
-
             &-active {
                 background: var(--pink);
                 box-shadow: 0 0 10px 0 #F0AF9A;
@@ -66,6 +71,12 @@
         backdrop-filter: blur(10px);
         border-radius: 50%;
         transition: all .3s;
+
+        @media (max-width: $mobile) {
+            .plans & {
+                @include size(45px);
+            }
+        }
 
         @media (min-width: $tablet) {
             &:hover {
