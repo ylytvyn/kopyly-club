@@ -29,3 +29,10 @@ body {
 	background: #fff;
 	min-width: 360px;
 }
+
+.amo-button-holder {
+	@media (max-width: $tablet) {
+		right: 5px!important;
+		bottom: 5px!important;
+	}
+}

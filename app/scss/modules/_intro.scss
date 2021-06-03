@@ -23,7 +23,7 @@
     }
 
     &__video {
-        width: 100%;
+        @include size(100%, 300px);
 
         @media (min-width: $tablet) {
             margin-top: -5%;

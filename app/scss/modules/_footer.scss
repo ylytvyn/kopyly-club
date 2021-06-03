@@ -15,15 +15,15 @@
 
     &__row {
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         a {
             @include font(16px, 700);
             text-decoration: none;
             transition: all .3s;
             color: var(--brown);
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
             @media (min-width: $tablet) {
                 &:hover {
